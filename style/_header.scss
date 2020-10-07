@@ -1,0 +1,29 @@
+// function 搭配mixin和變數使用
+// mixin 大量重複使用到的屬性
+@mixin flexCenter($direction,  $background) {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+    background: $background;
+}
+
+// Header
+header {
+    // 引入function
+    @include flexCenter(column,  lightblue); 
+    
+    color: $textColor;
+
+    button {
+        background: $primaryBtn;
+        // &:hover {
+        //     background: red;
+        // }
+
+        &::after{
+            content: "Helllooo";
+        }
+    }
+}

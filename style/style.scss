@@ -1,0 +1,10 @@
+@import "./variables";
+@import "./header";
+
+// contact
+.contact {
+    // @include flexCenter(row, lightgreen);
+    @extend header;  // 繼承 header 所有的樣式
+    background: rgb(243, 212, 200);
+    width: 100vw - 20vw;
+}
